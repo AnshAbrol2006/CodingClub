@@ -1,0 +1,151 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  transition: background 0.3s ease;
+}
+
+.app {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+#darkModeToggle {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.input-area {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#addTaskBtn {
+  padding: 10px 15px;
+  background: #66a6ff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#addTaskBtn:hover {
+  background: #4a8cff;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  flex: 1;
+  margin: 0 4px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-btn.active {
+  background: #66a6ff;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-text {
+  flex: 1;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Dark mode */
+body.dark {
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+body.dark .app {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark h1 {
+  color: #eee;
+}
+
+body.dark #darkModeToggle {
+  background: #eee;
+  color: #333;
+}
